@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry Pi on Budiman JOJO</title>
+    <link>https://budimanjojo.com/categories/raspberry-pi/</link>
+    <description>Recent content in Raspberry Pi on Budiman JOJO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 18 Dec 2019 01:24:55 +0000</lastBuildDate><atom:link href="https://budimanjojo.com/categories/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry Pi Media Server Series #4 &amp;#8211; Setting Up Docker</title>
+      <link>https://budimanjojo.com/2019/12/18/raspberry-pi-media-server-series-4-setting-up-docker/</link>
+      <pubDate>Wed, 18 Dec 2019 01:24:55 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2019/12/18/raspberry-pi-media-server-series-4-setting-up-docker/</guid>
+      <description>Introduction This is the forth part of my Raspberry Pi Media Server series. If you haven’t read our previous part, here’s where we discussed setting up external drives on Raspberry Pi. In this part, we are going to setting up Docker on Raspberry Pi. Here’s what you will get if you follow through the end of the tutorial:
+Docker and Docker Compose installed Docker data will be in the external drives Systemd will only start Docker if external drives are mounted Getting Started Before we get our hands on setting up docker on our Raspberry Pi, let’s first do a system update.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi Media Server Series #3 &amp;#8211; External Drives</title>
+      <link>https://budimanjojo.com/2019/12/09/raspberry-pi-media-server-series-3-external-drives/</link>
+      <pubDate>Mon, 09 Dec 2019 17:35:52 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2019/12/09/raspberry-pi-media-server-series-3-external-drives/</guid>
+      <description>Introduction This is the third part of Raspberry Pi Media Server series, if you haven’t read our previous part, here’s where we discussed securing SSH server on Raspberry Pi. In this post, I’m going to share how I setup external drives on my Raspberry Pi. Here’s a glimpse on my setup before you decided to read this entire lengthy page:
+Two hard drives in BTRF RAID1 format for data redundancy Mounted on /mnt and not hanging when the drives are not connected Monthly auto scrub to repair corrupted data Getting Started Now, let’s prepare the ingredients.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi Media Server Series #2 &amp;#8211; Secure SSH</title>
+      <link>https://budimanjojo.com/2019/11/30/raspberry-pi-media-server-series-2-secure-ssh/</link>
+      <pubDate>Sat, 30 Nov 2019 10:31:59 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2019/11/30/raspberry-pi-media-server-series-2-secure-ssh/</guid>
+      <description>Introduction This is the second part of my Raspberry Pi Media Server series. On previous post, I wrote about installing Manjaro Linux ARM into my Raspberry Pi 4. Now, we are going to secure our SSH server on Raspberry Pi so that we can at least prevent brute-force attempt on our future home media server from the evil outside world. Securing SSH server is one of the most crucial part of every server that can be accessible on the internet.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi Media Server Series #1 &amp;#8211; Installing Manjaro</title>
+      <link>https://budimanjojo.com/2019/11/25/raspberry-pi-media-server-series-1-installing-manjaro/</link>
+      <pubDate>Mon, 25 Nov 2019 00:04:50 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2019/11/25/raspberry-pi-media-server-series-1-installing-manjaro/</guid>
+      <description>Introduction So you bought a Raspberry Pi and you don’t know what should you do with it. Well, in this series I want to share my way of using my Raspberry Pi. I bet you already guessed it right by reading the title. Yes, this is the first part of my Raspberry Pi Media Server series. Before I continue, here’s what I have for this project:
+A full set of 2GB Raspberry Pi 4 Model B ORICO 3.</description>
+    </item>
+    
+  </channel>
+</rss>

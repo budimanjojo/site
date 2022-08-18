@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sops on Budiman JOJO</title>
+    <link>https://budimanjojo.com/tags/sops/</link>
+    <description>Recent content in sops on Budiman JOJO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 23 Oct 2021 16:16:41 +0000</lastBuildDate><atom:link href="https://budimanjojo.com/tags/sops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flux Secret Management with SOPS age</title>
+      <link>https://budimanjojo.com/2021/10/23/flux-secret-management-with-sops-age/</link>
+      <pubDate>Sat, 23 Oct 2021 16:16:41 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2021/10/23/flux-secret-management-with-sops-age/</guid>
+      <description>Introduction Following my previous post about Kubernetes management using Flux, this post will cover secret management using SOPS and age. SOPS is a tool to encrypt and decrypt text files while age is the encryption tool that is simple, modern, and secure.
+Reasons to Use SOPS and age Flux supports Sealed Secrets and SOPS as secret management, but I prefer SOPS for multiple reasons. You may or may not agree with me.</description>
+    </item>
+    
+  </channel>
+</rss>

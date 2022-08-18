@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>manjaro on Budiman JOJO</title>
+    <link>https://budimanjojo.com/tags/manjaro/</link>
+    <description>Recent content in manjaro on Budiman JOJO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 25 Nov 2019 00:04:50 +0000</lastBuildDate><atom:link href="https://budimanjojo.com/tags/manjaro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry Pi Media Server Series #1 &amp;#8211; Installing Manjaro</title>
+      <link>https://budimanjojo.com/2019/11/25/raspberry-pi-media-server-series-1-installing-manjaro/</link>
+      <pubDate>Mon, 25 Nov 2019 00:04:50 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2019/11/25/raspberry-pi-media-server-series-1-installing-manjaro/</guid>
+      <description>Introduction So you bought a Raspberry Pi and you don’t know what should you do with it. Well, in this series I want to share my way of using my Raspberry Pi. I bet you already guessed it right by reading the title. Yes, this is the first part of my Raspberry Pi Media Server series. Before I continue, here’s what I have for this project:
+A full set of 2GB Raspberry Pi 4 Model B ORICO 3.</description>
+    </item>
+    
+  </channel>
+</rss>

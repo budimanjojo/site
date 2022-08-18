@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+
+  
+<html itemscope itemtype="https://schema.org/WebPage" class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="https://budimanjojo.com/">
+    <meta name="author" content="Budiman">
+    <meta name="description" content="Life Journey of My Geeky Needs.">
+    <meta name="keywords" content="blog,personal,responsive,kubernetes,linux,gitops,fluxcd,dotfiles,cluster,container">
+    <meta name="generator" content="Hugo 0.101.0" />
+    <title>
+        
+           
+               Posts &vert; Budiman JOJO
+           
+        
+    </title>
+    <meta itemprop="name" content="Posts">
+    <meta itemprop="description" content="Posts - Life Journey of My Geeky Needs.">
+    <meta property="og:title" content="Posts">
+    <meta property="og:description" content="Posts - Life Journey of My Geeky Needs.">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+    <meta property="og:url" content="https://budimanjojo.com/post/">
+    <meta property="og:site_name" content="Budiman JOJO"><meta property="og:type" content="website">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+    <script src="/modernizr-simple.js"></script>
+
+    
+    <link href="/post/" rel="alternate" type="application/rss+xml" title="Budiman JOJO" />
+    <link href="/post/" rel="feed" type="application/rss+xml" title="Budiman JOJO" />
+    
+
+    
+    <link rel="canonical" href="https://budimanjojo.com/post/">
+    
+
+    <link rel="stylesheet" href="https://budimanjojo.com/theme.css">
+
+    
+
+    
+        
+    
+</head>
+
+<body class="bilberry-hugo-theme">
+
+    
+    <nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+        </ul>
+
+        
+            <div id="search-box" class="search">
+                <i class="fas fa-search"></i>
+                <input id="search" type="text" placeholder="Search ...">
+            </div>
+        
+    </div>
+</nav>
+
+
+    
+    <header>
+
+    <div class="container">
+        <div class="logo">
+            <a href="/" class="logo">
+                
+                    <img src="/avatar.png" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/">
+                    Budiman JOJO
+                </a>
+            </h3>
+
+            
+                <span class="subtitle">Life Journey of My Geeky Needs.</span>
+            
+        </div>
+
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+    </div>
+</header>
+
+
+    <div class="main container">
+        
+    
+    
+        <div class="article-wrapper u-cf">
+            
+                <a class="bubble" href="https://budimanjojo.com/2019/12/09/raspberry-pi-media-server-series-3-external-drives/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://budimanjojo.com/2019/12/09/raspberry-pi-media-server-series-3-external-drives/">
+            Raspberry Pi Media Server Series #3 &amp;#8211; External Drives
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2019-12-09</span>
+            
+        
+
+        
+
+        
+            <span class="categories">
+                
+                    
+                    
+                        <a href="https://budimanjojo.com/categories/linux/">Linux</a>
+                    
+                
+                    
+                    
+                        <a href="https://budimanjojo.com/categories/raspberry-pi/">Raspberry Pi</a>
+                    
+                
+            </span>
+        
+
+        
+            <span class="author">
+                
+                
+                    <a href="https://budimanjojo.com/author/budimanjojo/">budimanjojo</a>
+                
+            </span>
+        
+    </div>
+
+    
+        Introduction This is the third part of Raspberry Pi Media Server series, if you haven’t read our previous part, here’s where we discussed securing SSH server on Raspberry Pi. In this post, I’m going to share how I setup external drives on my Raspberry Pi. Here’s a glimpse on my setup before you decided to read this entire lengthy page:
+Two hard drives in BTRF RAID1 format for data redundancy Mounted on /mnt and not hanging when the drives are not connected Monthly auto scrub to repair corrupted data Getting Started Now, let’s prepare the ingredients.
+
+        
+            <a href="https://budimanjojo.com/2019/12/09/raspberry-pi-media-server-series-3-external-drives/" class="more">Continue reading</a>
+        
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/btrfs/">btrfs</a>
+                    
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/external-drives/">external drives</a>
+                    
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/raid/">raid</a>
+                    
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/raspberry-pi/">raspberry pi</a>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+            
+        </div>
+    
+        <div class="article-wrapper u-cf">
+            
+                <a class="bubble" href="https://budimanjojo.com/2019/11/30/raspberry-pi-media-server-series-2-secure-ssh/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://budimanjojo.com/2019/11/30/raspberry-pi-media-server-series-2-secure-ssh/">
+            Raspberry Pi Media Server Series #2 &amp;#8211; Secure SSH
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2019-11-30</span>
+            
+        
+
+        
+
+        
+            <span class="categories">
+                
+                    
+                    
+                        <a href="https://budimanjojo.com/categories/linux/">Linux</a>
+                    
+                
+                    
+                    
+                        <a href="https://budimanjojo.com/categories/raspberry-pi/">Raspberry Pi</a>
+                    
+                
+                    
+                    
+                        <a href="https://budimanjojo.com/categories/terminal-stuffs/">Terminal Stuffs</a>
+                    
+                
+            </span>
+        
+
+        
+            <span class="author">
+                
+                
+                    <a href="https://budimanjojo.com/author/budimanjojo/">budimanjojo</a>
+                
+            </span>
+        
+    </div>
+
+    
+        Introduction This is the second part of my Raspberry Pi Media Server series. On previous post, I wrote about installing Manjaro Linux ARM into my Raspberry Pi 4. Now, we are going to secure our SSH server on Raspberry Pi so that we can at least prevent brute-force attempt on our future home media server from the evil outside world. Securing SSH server is one of the most crucial part of every server that can be accessible on the internet.
+
+        
+            <a href="https://budimanjojo.com/2019/11/30/raspberry-pi-media-server-series-2-secure-ssh/" class="more">Continue reading</a>
+        
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/arm-ssh-raspberry-pi-linux-server/">arm ssh raspberry pi linux server</a>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+            
+        </div>
+    
+        <div class="article-wrapper u-cf">
+            
+                <a class="bubble" href="https://budimanjojo.com/2019/11/25/raspberry-pi-media-server-series-1-installing-manjaro/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://budimanjojo.com/2019/11/25/raspberry-pi-media-server-series-1-installing-manjaro/">
+            Raspberry Pi Media Server Series #1 &amp;#8211; Installing Manjaro
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2019-11-25</span>
+            
+        
+
+        
+
+        
+            <span class="categories">
+                
+                    
+                    
+                        <a href="https://budimanjojo.com/categories/linux/">Linux</a>
+                    
+                
+                    
+                    
+                        <a href="https://budimanjojo.com/categories/raspberry-pi/">Raspberry Pi</a>
+                    
+                
+            </span>
+        
+
+        
+            <span class="author">
+                
+                
+                    <a href="https://budimanjojo.com/author/budimanjojo/">budimanjojo</a>
+                
+            </span>
+        
+    </div>
+
+    
+        Introduction So you bought a Raspberry Pi and you don’t know what should you do with it. Well, in this series I want to share my way of using my Raspberry Pi. I bet you already guessed it right by reading the title. Yes, this is the first part of my Raspberry Pi Media Server series. Before I continue, here’s what I have for this project:
+A full set of 2GB Raspberry Pi 4 Model B ORICO 3.
+
+        
+            <a href="https://budimanjojo.com/2019/11/25/raspberry-pi-media-server-series-1-installing-manjaro/" class="more">Continue reading</a>
+        
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/arm/">arm</a>
+                    
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/linux/">linux</a>
+                    
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/manjaro/">manjaro</a>
+                    
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/raspberry-pi/">raspberry pi</a>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+            
+        </div>
+    
+
+    
+    <div class="paginator">
+        
+
+        
+            <a href="/post/" class="newer">Newer posts <i class="fa fa-angle-double-right"></i></a>
+        
+    </div>
+
+
+
+    </div>
+
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+            <ul>
+                
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/12/13/managing-dotfiles-with-chezmoi/">Managing Dotfiles with chezmoi</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/11/04/gitops-home-assistant-configurations/">How I GitOps Home Assistant Configurations</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/10/28/kured-kubernetes/">Automating Kubernetes Nodes Reboot with Kured</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/10/27/variable-substitution-in-flux-gitops/">Variable Substitution in Flux GitOps</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/10/23/flux-secret-management-with-sops-age/">Flux Secret Management with SOPS age</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/10/20/how-i-manage-my-kubernetes-manifests-using-flux/">How I Manage My Kubernetes Manifests Using Flux</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2019/12/18/raspberry-pi-media-server-series-4-setting-up-docker/">Raspberry Pi Media Server Series #4 &amp;#8211; Setting Up Docker</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        
+        <div class="categories">
+            <a href="/categories/"><strong>Categories</strong></a>
+            <ul>
+                
+                <li>
+                    <a href="/categories/linux">Linux
+                        (9)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/self-hosted">Self hosted
+                        (6)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/kubernetes">Kubernetes
+                        (5)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/raspberry-pi">Raspberry pi
+                        (4)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/terminal-stuffs">Terminal stuffs
+                        (2)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/desktop-stuffs">Desktop stuffs
+                        (1)</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>Social media</strong>
+
+                
+                <a href="https://github.com/budimanjojo" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <a href="mailto:budiman@budimanjojo.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                
+                <a href="https://www.youtube.com/channel/UCRDomXby1IfxWeTzB8xTOFA" target="_blank"><i class="fab fa-youtube"></i></a>
+                
+            </div>
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/budimanjojo" target="_blank">
+                &copy;
+                
+                2022
+                
+                by Budiman
+            </a>
+            -
+            <a href="https://budimanjojo.com/post/index.xml">RSS</a>
+        </div>
+        <div class="author">
+            <a href="https://github.com/Lednerb/bilberry-hugo-theme"
+                target="_blank">Bilberry Hugo Theme</a>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+
+
+    <script src="https://budimanjojo.com/theme.js"></script>
+
+    
+    
+    
+
+    
+    <div id="activate-algolia-search" class="hidden">
+  <input type="hidden" id="algolia-search-appId" value="72C1FEBFMX">
+  <input type="hidden" id="algolia-search-apiKey" value="f86a032ec932c5020e3a63404a6d937e">
+  <input type="hidden" id="algolia-search-indexName" value="budimanjojo_com">
+  <input type="hidden" id="algolia-search-noSearchResults" value="Nothing found.">
+
+  
+  <input type="hidden" id="algolia-search-currentLanguageOnly">
+  
+</div>
+
+    
+</body>
+
+</html>

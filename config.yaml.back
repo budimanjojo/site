@@ -1,0 +1,4 @@
+baseURL: https://budimanjojo.com
+disablePathToLower: true
+languageCode: en-us
+title: My New Hugo Site

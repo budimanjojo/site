@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chezmoi on Budiman JOJO</title>
+    <link>https://budimanjojo.com/tags/chezmoi/</link>
+    <description>Recent content in chezmoi on Budiman JOJO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Dec 2021 23:54:07 +0000</lastBuildDate><atom:link href="https://budimanjojo.com/tags/chezmoi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Managing Dotfiles with chezmoi</title>
+      <link>https://budimanjojo.com/2021/12/13/managing-dotfiles-with-chezmoi/</link>
+      <pubDate>Mon, 13 Dec 2021 23:54:07 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2021/12/13/managing-dotfiles-with-chezmoi/</guid>
+      <description>Introduction The biggest difference between my setup and your setup might be our configuration files. In Unix world we call them dotfiles. Dotfiles are just files whose filename starts with a dot and will be hidden by default in our file managers.
+Usually we have several machines that we use consequently, and we want all those machines to share the same environment. And that’s why most most people will have have own collection of dotfiles stored somewhere so they can easily migrate them over to their new machine.</description>
+    </item>
+    
+  </channel>
+</rss>

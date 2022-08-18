@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gitops on Budiman JOJO</title>
+    <link>https://budimanjojo.com/tags/gitops/</link>
+    <description>Recent content in gitops on Budiman JOJO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 04 Nov 2021 17:37:02 +0000</lastBuildDate><atom:link href="https://budimanjojo.com/tags/gitops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I GitOps Home Assistant Configurations</title>
+      <link>https://budimanjojo.com/2021/11/04/gitops-home-assistant-configurations/</link>
+      <pubDate>Thu, 04 Nov 2021 17:37:02 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2021/11/04/gitops-home-assistant-configurations/</guid>
+      <description>Introduction I always love the idea of GitOps, where everything I have in a git repo represents the current state of my application. But not everything are made for GitOps, so we have to sort of “make it work”. In this post, I will show you how I manage to GitOps my Home Assistant configurations. Spoiler, this is hacky and messy at the same time, so please bear this in mind before continuing.</description>
+    </item>
+    
+    <item>
+      <title>Automating Kubernetes Nodes Reboot with Kured</title>
+      <link>https://budimanjojo.com/2021/10/28/kured-kubernetes/</link>
+      <pubDate>Thu, 28 Oct 2021 16:05:01 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2021/10/28/kured-kubernetes/</guid>
+      <description>Introduction Having an up-to-date Kubernetes node is important, especially security updates. Sometimes an update requires a reboot to take effect, and you don’t want to keep checking them manually. In this post, I will share about how I automate my Kubernetes nodes to reboot when necessary using Kured.
+Linux Distro Specific Before doing the actual setting up process, every Linux distribution has its own way to decide whether a reboot is required or not.</description>
+    </item>
+    
+    <item>
+      <title>Variable Substitution in Flux GitOps</title>
+      <link>https://budimanjojo.com/2021/10/27/variable-substitution-in-flux-gitops/</link>
+      <pubDate>Wed, 27 Oct 2021 13:36:08 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2021/10/27/variable-substitution-in-flux-gitops/</guid>
+      <description>Introduction Sometimes there are values that you want to use multiple times in your manifest files. Usually, we define them using a config map or secret and we either mount them as a file or environment variable. This is easy if you don’t use GitOps and you only have a small amount of pods. Also, having a single configmap and secret will clean up a lot of mess out of your cluster, and this is what variable substitution will do for you.</description>
+    </item>
+    
+    <item>
+      <title>Flux Secret Management with SOPS age</title>
+      <link>https://budimanjojo.com/2021/10/23/flux-secret-management-with-sops-age/</link>
+      <pubDate>Sat, 23 Oct 2021 16:16:41 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2021/10/23/flux-secret-management-with-sops-age/</guid>
+      <description>Introduction Following my previous post about Kubernetes management using Flux, this post will cover secret management using SOPS and age. SOPS is a tool to encrypt and decrypt text files while age is the encryption tool that is simple, modern, and secure.
+Reasons to Use SOPS and age Flux supports Sealed Secrets and SOPS as secret management, but I prefer SOPS for multiple reasons. You may or may not agree with me.</description>
+    </item>
+    
+    <item>
+      <title>How I Manage My Kubernetes Manifests Using Flux</title>
+      <link>https://budimanjojo.com/2021/10/20/how-i-manage-my-kubernetes-manifests-using-flux/</link>
+      <pubDate>Wed, 20 Oct 2021 18:45:56 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2021/10/20/how-i-manage-my-kubernetes-manifests-using-flux/</guid>
+      <description>Introduction GitOps is currently the most popular way to manage your services. It’s sort of what DevOps is but with Git. To put it in a simple way, it is a practice where you manage everything through git. Whatever you have in your git repository is what your cluster current state is. Because GitOps is so popular there are a lot of new tools focusing on GitOps right now, and Flux is one of them.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+
+  
+<html itemscope itemtype="https://schema.org/WebPage" class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="https://budimanjojo.com/">
+    <meta name="author" content="Budiman">
+    <meta name="description" content="Life Journey of My Geeky Needs.">
+    <meta name="keywords" content="blog,personal,responsive,kubernetes,linux,gitops,fluxcd,dotfiles,cluster,container">
+    <meta name="generator" content="Hugo 0.101.0" />
+    <title>
+        
+           
+               Managing Dotfiles with chezmoi &vert; Budiman JOJO
+           
+        
+    </title>
+    <meta itemprop="name" content="Managing Dotfiles with chezmoi">
+    <meta itemprop="description" content="Managing Dotfiles with chezmoi - Life Journey of My Geeky Needs.">
+    <meta property="og:title" content="Managing Dotfiles with chezmoi">
+    <meta property="og:description" content="Managing Dotfiles with chezmoi - Life Journey of My Geeky Needs.">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+    <meta property="og:url" content="https://budimanjojo.com/2021/12/13/managing-dotfiles-with-chezmoi/">
+    <meta property="og:site_name" content="Budiman JOJO">
+    <meta property="og:type" content="article">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+    <script src="/modernizr-simple.js"></script>
+
+    
+    <link href="/2021/12/13/managing-dotfiles-with-chezmoi/" rel="alternate" type="application/rss+xml" title="Budiman JOJO" />
+    <link href="/2021/12/13/managing-dotfiles-with-chezmoi/" rel="feed" type="application/rss+xml" title="Budiman JOJO" />
+    
+
+    
+    <link rel="canonical" href="https://budimanjojo.com/2021/12/13/managing-dotfiles-with-chezmoi/">
+    
+
+    <link rel="stylesheet" href="https://budimanjojo.com/theme.css">
+
+    
+
+    
+        
+    
+</head>
+
+<body class="bilberry-hugo-theme">
+
+    
+    <nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+        </ul>
+
+        
+            <div id="search-box" class="search">
+                <i class="fas fa-search"></i>
+                <input id="search" type="text" placeholder="Search ...">
+            </div>
+        
+    </div>
+</nav>
+
+
+    
+    <header>
+
+    <div class="container">
+        <div class="logo">
+            <a href="/" class="logo">
+                
+                    <img src="/avatar.png" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/">
+                    Budiman JOJO
+                </a>
+            </h3>
+
+            
+                <span class="subtitle">Life Journey of My Geeky Needs.</span>
+            
+        </div>
+
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+    </div>
+</header>
+
+
+    <div class="main container">
+        
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="https://budimanjojo.com/2021/12/13/managing-dotfiles-with-chezmoi/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://budimanjojo.com/2021/12/13/managing-dotfiles-with-chezmoi/">
+            Managing Dotfiles with chezmoi
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2021-12-13</span>
+            
+        
+
+        
+
+        
+            <span class="categories">
+                
+                    
+                    
+                        <a href="https://budimanjojo.com/categories/desktop-stuffs/">Desktop Stuffs</a>
+                    
+                
+                    
+                    
+                        <a href="https://budimanjojo.com/categories/linux/">Linux</a>
+                    
+                
+                    
+                    
+                        <a href="https://budimanjojo.com/categories/terminal-stuffs/">Terminal Stuffs</a>
+                    
+                
+            </span>
+        
+
+        
+            <span class="author">
+                
+                
+                    <a href="https://budimanjojo.com/author/budimanjojo/">budimanjojo</a>
+                
+            </span>
+        
+    </div>
+
+    
+        
+
+        <h2 id="introduction">Introduction</h2>
+<p>The biggest difference between my setup and your setup might be our configuration files. In Unix world we call them dotfiles. Dotfiles are just files whose filename starts with a dot and will be hidden by default in our file managers.</p>
+<p>Usually we have several machines that we use consequently, and we want all those machines to share the same environment. And that’s why most most people will have have own collection of dotfiles stored somewhere so they can easily migrate them over to their new machine.</p>
+<p>This could be easily achieved without having any software, you can just store them in your Github repository right? Right, but not everything will go as you want it to be. Here’s my take on what problem you might encounter:</p>
+<ul>
+<li>Sometimes you have different versions of programs that needs changes in the dotfiles</li>
+<li>You don’t want your secrets like credentials etc in a git repository unencrypted</li>
+<li>You need to do something on your brand new computers before you can use those dotfiles</li>
+<li>The path where those dotfiles should be are different across machines</li>
+</ul>
+<p>You may have more problem than I can think of right now. But in my experience, <a href="https://github.com/twpayne/chezmoi">chezmoi</a> covers everything. Please note that this is not a step by step tutorial on how to use chezmoi because it’s a very complex program and you’ll need a lot of readings. You can start from the easy to follow <a href="https://github.com/twpayne/chezmoi/tree/master/docs">official documentation</a> to get started. This post is more about me sharing how I’m managing my dotfiles with chezmoi.</p>
+<h2 id="background">Background</h2>
+<p>I have been using Linux as my primary OS since 2012. And I had my first dotfile was like a year after using Linux when I switched to use <a href="https://www.zsh.org/">ZSH</a> as my default shell. I don’t remember how I managed them back then, but from my dotfiles <a href="https://github.com/budimanjojo/dotfiles/graphs/contributors">repository timeline</a> I first created that repo in June 2014. I started out by symlinking my dotfiles from git repository into my <code>$HOME</code> directory, to having an install script written in bash, to having <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html">ansible-playbook</a>, to using chezmoi.</p>
+<p>From my experience all this years, I can feel how much chezmoi helped me in managing my dotfiles, and I want to share it.</p>
+<h2 id="installing-chezmoi">Installing chezmoi</h2>
+<p>The first thing you need to do before starting to use chezmoi is of course installing the program itself. There are a <a href="https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md">lot of ways to install chezmoi</a>, but I like the put them in a <a href="https://github.com/budimanjojo/dotfiles/blob/master/install.sh">script</a>. So I can just run one command like this to install chezmoi:</p>
+<pre tabindex="0"><code>&lt;pre class=&#34;wp-block-code&#34;&gt;```
+curl https://raw.githubusercontent.com/budimanjojo/dotfiles/master/install.sh | bash
+</code></pre><pre tabindex="0"><code>
+Once installed, you can create a repository in Github or Gitlab or any other similar tools to host your git repository. To simplify using chezmoi, I suggest you to name your repository `dotfiles`. Once done, you can run `chezmoi init &lt;your remote repository username&gt;` and you can start adding your dotfiles with `chezmoi add` command.
+
+## Understanding the Concept
+
+Chezmoi is very different from other dotfiles manager tools out there, it might be confusing at first. Especially if you used to use the traditional ways like symlinking or using [stow](https://www.gnu.org/software/stow/).
+
+What you need to know is, try to use `chezmoi` command as much as you can. For example, to add your [Alacritty](https://github.com/alacritty/alacritty) config, you do `chezmoi add ~/.config/alacritty/alacritty.yml`. This will create the file in your repository with this path: `dot_config/alacritty/alacritty.yml`. You can then do git add, commit, and push the changes to your remote repository. On your other machine, you can then install and init chezmoi, then do `chezmoi apply` to copy your Alacritty config into your new machine.
+
+In summary, you do `chezmoi init` command once, then add files into your repository with `chezmoi add`. Once you have everything added, in your new machine you simply do `chezmoi apply` and everything will be applied to your new machine. Also, there is `chezmoi update` command to update your local repository to match your remote repository. I suggest you to [setup chezmoi completion](https://www.chezmoi.io/docs/reference/#completion-shell) for your favorite shell so you can start managing dotfiles with chezmoi be easier.
+
+## What Is the Difference From Other Tools
+
+I can see you guys might be asking what is the difference from other tools. You can look at this [comparison table](https://github.com/twpayne/chezmoi/blob/master/docs/COMPARISON.md#comparison-table). For me, chezmoi have everything you may or may not have. It’s like combination of all the other dotfiles managers out there that do everything. Here are the features that I’m currently using intensively.
+
+### 1. Templating
+
+This is by far one of the features that I love so much when using chezmoi. To add a template in chezmoi, you can use `--template` flag when doing the `add` command like this: `chezmoi add --template ~/.gitconfig`. This command will create a `dot_gitconfig.tmpl` file in your repo that you can start templating. What’s the use case of this? A lot, I mean really a lot. You can use it to change a value of a dotfile according to hostname, OS, etc.
+
+When you do chezmoi init, it will create a set of variables that you can use. You can look at them by doing `chezmoi data` command, it’s similar to what `ansible facts` is. You can also add your own “data” using chezmoi [config file](https://github.com/twpayne/chezmoi/blob/master/docs/REFERENCE.md#configuration-file).
+
+I use template for things machine specific config, for example I want my terminal font to be size 12 in my main machine, but I want it to be size 14 in my work machine. I also use it to disable something when it doesn’t match some conditions, for example I want to load `kubectl` command completion when I’m at my work machine but not on my home machine.
+
+### 2. Ignore File
+
+You can also add a file named `.chezmoiignore` in your repository and chezmoi will ignore the files listed inside. It’s like `.gitignore` file, but the patterns you put inside should match the `source` file and not the `destination` file. Usually you put your `README.md` or `LICENSE` in here so they don’t get into your `$HOME` directory. But the great thing about this file is you can also do templating inside it. I use this to ignore files base on conditions, for example I ignore window manager specific dotfiles when the machine is headless etc.
+
+### 3. Scripts
+
+Now this is another powerful feature from chezmoi, scripting. You can add scripts anywhere in your repository or put them in `.chezmoiscripts` directory. The filename has to starts with `run_` and ends with `.tmpl`. Basically these scripts will run everytime you do `chezmoi apply` command, but you can tell it to run once per machine or only run when there are changes. You can also specify whether the scripts should be run before or after copying the dotfiles. For example, to have the script run once before updating the dotfiles, create the filename like this: `run_once_before_&lt;do something&gt;.sh.tmpl`.  
+There’s one thing you need to be aware of, chezmoi will run these scripts using `exec` command. So you need to make sure you provide `&lt;a href=&#34;https://bash.cyberciti.biz/guide/Shebang&#34;&gt;shebang&lt;/a&gt;` inside the file. Also, try to make those scripts as [idempotent](https://en.wikipedia.org/wiki/Idempotence) as you can so it doesn’t do the same thing over and over again whenever you run `chezmoi apply`.
+
+I use this feature to do packages installation, setting up shell, downloading something, etc.
+
+### 4. Encrypted Secrets
+
+Another feature of chezmoi is the ability to put encrypted dotfiles in your public repository safely. Chezmoi supports whole file encryption using [age](https://github.com/FiloSottile/age) or value encryption using password managers. I don’t use password manager yet so I can’t say much about this. But I use the whole file encryption with age and it works fine. If you want to have a glimpse on what age is, I have a post about [how I use SOPS and age to encrypt my kubernetes secrets](https://budimanjojo.com/2021/10/23/flux-secret-management-with-sops-age/).
+
+To actually create encrypted dotfile using age with chezmoi, you need to have this section in your chezmoi config file:
+</code></pre><!-- raw HTML omitted -->
+
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/chezmoi/">chezmoi</a>
+                    
+                
+                    
+                    
+                    <a href="https://budimanjojo.com/tags/dotfiles/">dotfiles</a>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        <div id="comments-container">
+            
+            
+
+            
+
+            
+
+        </div>
+    
+
+    </div>
+
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+            <ul>
+                
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/12/13/managing-dotfiles-with-chezmoi/">Managing Dotfiles with chezmoi</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/11/04/gitops-home-assistant-configurations/">How I GitOps Home Assistant Configurations</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/10/28/kured-kubernetes/">Automating Kubernetes Nodes Reboot with Kured</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/10/27/variable-substitution-in-flux-gitops/">Variable Substitution in Flux GitOps</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/10/23/flux-secret-management-with-sops-age/">Flux Secret Management with SOPS age</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2021/10/20/how-i-manage-my-kubernetes-manifests-using-flux/">How I Manage My Kubernetes Manifests Using Flux</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://budimanjojo.com/2019/12/18/raspberry-pi-media-server-series-4-setting-up-docker/">Raspberry Pi Media Server Series #4 &amp;#8211; Setting Up Docker</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        
+        <div class="categories">
+            <a href="/categories/"><strong>Categories</strong></a>
+            <ul>
+                
+                <li>
+                    <a href="/categories/linux">Linux
+                        (9)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/self-hosted">Self hosted
+                        (6)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/kubernetes">Kubernetes
+                        (5)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/raspberry-pi">Raspberry pi
+                        (4)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/terminal-stuffs">Terminal stuffs
+                        (2)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/desktop-stuffs">Desktop stuffs
+                        (1)</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>Social media</strong>
+
+                
+                <a href="https://github.com/budimanjojo" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <a href="mailto:budiman@budimanjojo.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                
+                <a href="https://www.youtube.com/channel/UCRDomXby1IfxWeTzB8xTOFA" target="_blank"><i class="fab fa-youtube"></i></a>
+                
+            </div>
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/budimanjojo" target="_blank">
+                &copy;
+                
+                2022
+                
+                by Budiman
+            </a>
+            
+        </div>
+        <div class="author">
+            <a href="https://github.com/Lednerb/bilberry-hugo-theme"
+                target="_blank">Bilberry Hugo Theme</a>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+
+
+    <script src="https://budimanjojo.com/theme.js"></script>
+
+    
+    
+    
+
+    
+    <div id="activate-algolia-search" class="hidden">
+  <input type="hidden" id="algolia-search-appId" value="72C1FEBFMX">
+  <input type="hidden" id="algolia-search-apiKey" value="f86a032ec932c5020e3a63404a6d937e">
+  <input type="hidden" id="algolia-search-indexName" value="budimanjojo_com">
+  <input type="hidden" id="algolia-search-noSearchResults" value="Nothing found.">
+
+  
+  <input type="hidden" id="algolia-search-currentLanguageOnly">
+  
+</div>
+
+    
+</body>
+
+</html>

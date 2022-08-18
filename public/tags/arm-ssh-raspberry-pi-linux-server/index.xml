@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arm ssh raspberry pi linux server on Budiman JOJO</title>
+    <link>https://budimanjojo.com/tags/arm-ssh-raspberry-pi-linux-server/</link>
+    <description>Recent content in arm ssh raspberry pi linux server on Budiman JOJO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 30 Nov 2019 10:31:59 +0000</lastBuildDate><atom:link href="https://budimanjojo.com/tags/arm-ssh-raspberry-pi-linux-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry Pi Media Server Series #2 &amp;#8211; Secure SSH</title>
+      <link>https://budimanjojo.com/2019/11/30/raspberry-pi-media-server-series-2-secure-ssh/</link>
+      <pubDate>Sat, 30 Nov 2019 10:31:59 +0000</pubDate>
+      
+      <guid>https://budimanjojo.com/2019/11/30/raspberry-pi-media-server-series-2-secure-ssh/</guid>
+      <description>Introduction This is the second part of my Raspberry Pi Media Server series. On previous post, I wrote about installing Manjaro Linux ARM into my Raspberry Pi 4. Now, we are going to secure our SSH server on Raspberry Pi so that we can at least prevent brute-force attempt on our future home media server from the evil outside world. Securing SSH server is one of the most crucial part of every server that can be accessible on the internet.</description>
+    </item>
+    
+  </channel>
+</rss>
