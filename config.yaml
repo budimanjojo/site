@@ -1,0 +1,103 @@
+title: Budiman JoJo
+baseURL: https://budimanjojo.com
+theme: bilberry-hugo-theme
+enableRobotsTXT: true
+
+# Language
+defaultContentLanguage: en
+languages:
+  en:
+    weight: 1
+
+params:
+  css_modules: []
+  js_modules: []
+  author: budimanjojo
+  description: Life Journey of My Geeky Needs.
+  keywords: blog,personal,responsive,kubernetes,linux,gitops,fluxcd,dotfiles,cluster,container
+  subtitle: Life Journey of My Geeky Needs.
+  resizeImages: true
+
+  # Appearance
+  customImage: avatar.png
+  overlayIcon: fa-home
+  paginate: 7
+  permanentTopNav: true
+  stickyNav: false
+  showHeaderLanguageChooser: false
+  dateFormat: 2006-01-02
+  showReadingTime: true
+
+  # Automatic localization of PublishedDate with momentjs
+  enableMomentJs: true
+
+  # Minimum word count to display Table Of Contents
+  tocMinWordCount: 400
+
+  # Algolia
+  algolia_search: true
+  algolia_appId: 72C1FEBFMX
+  algolia_apiKey: f86a032ec932c5020e3a63404a6d937e
+  algolia_indexName: budimanjojo_com
+  algolia_currentLanguageOnly: false
+
+  # Giscus
+  giscus: true
+  giscusJsUrl: https://giscus.app/client.js
+  giscusRepository: budimanjojo/site
+  giscusRepositoryId: R_kgDOH1yWAQ
+  giscusMapping: title
+  giscusCategory: General
+  giscusCategoryId: DIC_kwDOH1yWAc4CQ6Px
+  giscusTheme: light_tritanopia
+  giscusReactions: "1"
+  giscusEmitMetadata: "0"
+  giscusLanguage: en
+  giscusCrossOrigin: anonymous
+
+  # Footer
+  showFooter: true
+  showSocialMedia: true
+  showFooterLanguageChooser: false
+  amountLatestPostsInFooter: 6
+  amountCategoriesInFooter: 6
+  showArchive: false
+  archiveDateGrouping: 2006-01
+  socialMediaLinks:
+    - link: https://github.com/budimanjojo
+      icon: fab fa-github
+    - link: mailto:budiman@budimanjojo.com
+      icon: fa fa-envelope
+    - link: https://www.youtube.com/channel/UCRDomXby1IfxWeTzB8xTOFA
+      icon: fab fa-youtube
+
+  # Credits
+  copyrightBy: by budimanjojo
+  copyrightUseCurrentYear: true
+  copyrightYearOverride: "2017"
+  copyrightUrl: https://github.com/budimanjojo
+  creditsText: Bilberry Hugo Theme
+  creditsUrl: https://github.com/Lednerb/bilberry-hugo-theme
+
+# don't change anything below
+taxonomies:
+  author: author
+  tag: tags
+  category: categories
+  series: series
+outputs:
+  home:
+    - HTML
+    - JSON
+    - RSS
+  page:
+    - HTML
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: false
+  tableOfContents:
+    endLevel: 5
+    ordered: false
+    startLevel: 2
