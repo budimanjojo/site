@@ -7,15 +7,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="siteBaseUrl" content="https://budimanjojo.com/">
-    <meta name="author" content="Budiman">
+    <meta name="siteBaseUrl" content="https://budimanjojo.com">
+    <meta name="author" content="budimanjojo">
     <meta name="description" content="Life Journey of My Geeky Needs.">
     <meta name="keywords" content="blog,personal,responsive,kubernetes,linux,gitops,fluxcd,dotfiles,cluster,container">
     <meta name="generator" content="Hugo 0.101.0" />
     <title>
         
            
-               How I GitOps Home Assistant Configurations &vert; Budiman JOJO
+               How I GitOps Home Assistant Configurations &vert; Budiman JoJo
            
         
     </title>
@@ -25,7 +25,7 @@
     <meta property="og:description" content="How I GitOps Home Assistant Configurations - Life Journey of My Geeky Needs.">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
     <meta property="og:url" content="https://budimanjojo.com/2021/11/04/gitops-home-assistant-configurations/">
-    <meta property="og:site_name" content="Budiman JOJO">
+    <meta property="og:site_name" content="Budiman JoJo">
     <meta property="og:type" content="article">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -40,8 +40,8 @@
     <script src="/modernizr-simple.js"></script>
 
     
-    <link href="/2021/11/04/gitops-home-assistant-configurations/" rel="alternate" type="application/rss+xml" title="Budiman JOJO" />
-    <link href="/2021/11/04/gitops-home-assistant-configurations/" rel="feed" type="application/rss+xml" title="Budiman JOJO" />
+    <link href="/2021/11/04/gitops-home-assistant-configurations/" rel="alternate" type="application/rss+xml" title="Budiman JoJo" />
+    <link href="/2021/11/04/gitops-home-assistant-configurations/" rel="feed" type="application/rss+xml" title="Budiman JoJo" />
     
 
     
@@ -60,10 +60,22 @@
 <body class="bilberry-hugo-theme">
 
     
-    <nav>
+    <nav class="permanentTopNav">
 
     <div class="container">
         <ul class="topnav">
+            
+                
+                    <li><a href="https://github.com/budimanjojo" target="_blank">Github</a></li>
+                
+            
+                
+                    <li><a href="/archive/" target="">Archive</a></li>
+                
+            
+                
+                    <li><a href="https://budimanjojo.com/page/about-budimanjojo/">About Me</a></li>
+                
             
         </ul>
 
@@ -93,7 +105,7 @@
         <div class="titles">
             <h3 class="title">
                 <a href="/">
-                    Budiman JOJO
+                    Budiman JoJo
                 </a>
             </h3>
 
@@ -105,7 +117,7 @@
         
 
         
-            <div class="toggler">
+            <div class="toggler permanentTopNav">
         
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
@@ -138,6 +150,10 @@
             
         
 
+        
+            
+                <span class="readingTime">2 min read</span>
+            
         
 
         
@@ -174,7 +190,7 @@
     
         
 
-        <h2 id="introduction">Introduction</h2>
+        <p><img src="/wp-content/uploads/2021/11/hass-gitops-e1636021510398.png" alt="home assistant gitops"></p>
 <p>I always love the idea of GitOps, where everything I have in a git repo represents the current state of my application. But not everything are made for GitOps, so we have to sort of “make it work”. In this post, I will show you how I manage to GitOps my Home Assistant configurations. Spoiler, this is hacky and messy at the same time, so please bear this in mind before continuing.</p>
 <h2 id="my-setup">My Setup</h2>
 <p>I deployed my Home Assistant in a Kubernetes cluster that I <a href="https://budimanjojo.com/2021/10/20/how-i-manage-my-kubernetes-manifests-using-flux/">manage using Flux</a>. The <code>/config</code> directory is stored in a <a href="https://longhorn.io/">Longhorn</a> provisioned PVC. The <code>yaml</code> files can be seen <a href="https://github.com/budimanjojo/home-cluster/tree/main/cluster/apps/homeassistant">here</a>. Another thing to keep in mind is that I use the official Home Assistant container image which has <code>git</code> installed in the container by default. This is important because you will need that command in your container.</p>
@@ -203,7 +219,6 @@ The url is a [Github secret](https://docs.github.com/en/actions/security-guides/
 
 In my Home Assistant, I create an automation like this:
 </code></pre><!-- raw HTML omitted -->
-
     
 </div>
 
@@ -254,6 +269,23 @@ In my Home Assistant, I create an automation like this:
             
 
             
+    <script src="https://giscus.app/client.js"
+        data-repo="budimanjojo/site"
+        data-repo-id="R_kgDOH1yWAQ"
+        data-category="General"
+        data-category-id="DIC_kwDOH1yWAc4CQ6Px"
+        data-mapping="title"
+        data-reactions-enabled="1"
+        data-emit-metadata=""
+        data-theme="light_tritanopia"
+        
+            data-lang="en"
+        
+        crossorigin="anonymous"
+        async>
+    </script>
+    <div id="giscus"></div>
+
 
             
 
@@ -294,10 +326,6 @@ In my Home Assistant, I create an automation like this:
                 
                     <li>
                         <a href="https://budimanjojo.com/2021/10/20/how-i-manage-my-kubernetes-manifests-using-flux/">How I Manage My Kubernetes Manifests Using Flux</a>
-                    </li>
-                
-                    <li>
-                        <a href="https://budimanjojo.com/2019/12/18/raspberry-pi-media-server-series-4-setting-up-docker/">Raspberry Pi Media Server Series #4 &amp;#8211; Setting Up Docker</a>
                     </li>
                 
             </ul>
@@ -374,7 +402,7 @@ In my Home Assistant, I create an automation like this:
                 
                 2022
                 
-                by Budiman
+                by budimanjojo
             </a>
             
         </div>
@@ -404,8 +432,6 @@ In my Home Assistant, I create an automation like this:
   <input type="hidden" id="algolia-search-indexName" value="budimanjojo_com">
   <input type="hidden" id="algolia-search-noSearchResults" value="Nothing found.">
 
-  
-  <input type="hidden" id="algolia-search-currentLanguageOnly">
   
 </div>
 

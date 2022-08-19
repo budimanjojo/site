@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>age on Budiman JOJO</title>
+    <title>age on Budiman JoJo</title>
     <link>https://budimanjojo.com/tags/age/</link>
-    <description>Recent content in age on Budiman JOJO</description>
+    <description>Recent content in age on Budiman JoJo</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 23 Oct 2021 16:16:41 +0000</lastBuildDate><atom:link href="https://budimanjojo.com/tags/age/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,8 +12,8 @@
       <pubDate>Sat, 23 Oct 2021 16:16:41 +0000</pubDate>
       
       <guid>https://budimanjojo.com/2021/10/23/flux-secret-management-with-sops-age/</guid>
-      <description>Introduction Following my previous post about Kubernetes management using Flux, this post will cover secret management using SOPS and age. SOPS is a tool to encrypt and decrypt text files while age is the encryption tool that is simple, modern, and secure.
-Reasons to Use SOPS and age Flux supports Sealed Secrets and SOPS as secret management, but I prefer SOPS for multiple reasons. You may or may not agree with me.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://budimanjojo.com/wp-content/uploads/2021/10/flux-sops-secret-e1635315378509.png&#34; alt=&#34;flux secret with sops age&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Following my &lt;a href=&#34;https://budimanjojo.com/2021/10/20/how-i-manage-my-kubernetes-manifests-using-flux/&#34;&gt;previous post&lt;/a&gt; about Kubernetes management using &lt;a href=&#34;https://fluxcd.io/&#34;&gt;Flux&lt;/a&gt;, this post will cover secret management using &lt;a href=&#34;https://github.com/mozilla/sops&#34;&gt;SOPS&lt;/a&gt; and &lt;a href=&#34;https://github.com/FiloSottile/age&#34;&gt;age&lt;/a&gt;. SOPS is a tool to encrypt and decrypt text files while age is the encryption tool that is simple, modern, and secure.&lt;/p&gt;</description>
     </item>
     
   </channel>

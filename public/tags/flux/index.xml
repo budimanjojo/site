@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>flux on Budiman JOJO</title>
+    <title>flux on Budiman JoJo</title>
     <link>https://budimanjojo.com/tags/flux/</link>
-    <description>Recent content in flux on Budiman JOJO</description>
+    <description>Recent content in flux on Budiman JoJo</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 27 Oct 2021 13:36:08 +0000</lastBuildDate><atom:link href="https://budimanjojo.com/tags/flux/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,7 +12,8 @@
       <pubDate>Wed, 27 Oct 2021 13:36:08 +0000</pubDate>
       
       <guid>https://budimanjojo.com/2021/10/27/variable-substitution-in-flux-gitops/</guid>
-      <description>Introduction Sometimes there are values that you want to use multiple times in your manifest files. Usually, we define them using a config map or secret and we either mount them as a file or environment variable. This is easy if you don’t use GitOps and you only have a small amount of pods. Also, having a single configmap and secret will clean up a lot of mess out of your cluster, and this is what variable substitution will do for you.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://budimanjojo.com/wp-content/uploads/2021/10/variable-substitution-e1635316253419.png&#34; alt=&#34;variable substitution in flux&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes there are values that you want to use multiple times in your manifest files. Usually, we define them using a config map or secret and we either mount them as a file or environment variable. This is easy if you don’t use GitOps and you only have a small amount of pods. Also, having a single configmap and secret will clean up a lot of mess out of your cluster, and this is what variable substitution will do for you. I find this really useful especially for sensitive information you don’t want people all around the world to see. In this post, I will show you how I do variable substitution using Flux GitOps tool.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -21,8 +22,8 @@
       <pubDate>Sat, 23 Oct 2021 16:16:41 +0000</pubDate>
       
       <guid>https://budimanjojo.com/2021/10/23/flux-secret-management-with-sops-age/</guid>
-      <description>Introduction Following my previous post about Kubernetes management using Flux, this post will cover secret management using SOPS and age. SOPS is a tool to encrypt and decrypt text files while age is the encryption tool that is simple, modern, and secure.
-Reasons to Use SOPS and age Flux supports Sealed Secrets and SOPS as secret management, but I prefer SOPS for multiple reasons. You may or may not agree with me.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://budimanjojo.com/wp-content/uploads/2021/10/flux-sops-secret-e1635315378509.png&#34; alt=&#34;flux secret with sops age&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Following my &lt;a href=&#34;https://budimanjojo.com/2021/10/20/how-i-manage-my-kubernetes-manifests-using-flux/&#34;&gt;previous post&lt;/a&gt; about Kubernetes management using &lt;a href=&#34;https://fluxcd.io/&#34;&gt;Flux&lt;/a&gt;, this post will cover secret management using &lt;a href=&#34;https://github.com/mozilla/sops&#34;&gt;SOPS&lt;/a&gt; and &lt;a href=&#34;https://github.com/FiloSottile/age&#34;&gt;age&lt;/a&gt;. SOPS is a tool to encrypt and decrypt text files while age is the encryption tool that is simple, modern, and secure.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +32,8 @@ Reasons to Use SOPS and age Flux supports Sealed Secrets and SOPS as secret mana
       <pubDate>Wed, 20 Oct 2021 18:45:56 +0000</pubDate>
       
       <guid>https://budimanjojo.com/2021/10/20/how-i-manage-my-kubernetes-manifests-using-flux/</guid>
-      <description>Introduction GitOps is currently the most popular way to manage your services. It’s sort of what DevOps is but with Git. To put it in a simple way, it is a practice where you manage everything through git. Whatever you have in your git repository is what your cluster current state is. Because GitOps is so popular there are a lot of new tools focusing on GitOps right now, and Flux is one of them.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://budimanjojo.com/wp-content/uploads/2021/10/home-cluster.png&#34; alt=&#34;manage kubernetes manifests flux&#34;&gt;&lt;/p&gt;
+&lt;p&gt;GitOps is currently the most popular way to manage your services. It’s sort of what DevOps is but with Git. To put it in a simple way, it is a practice where you manage everything through git. Whatever you have in your git repository is what your cluster current state is. Because GitOps is so popular there are a lot of new tools focusing on GitOps right now, and &lt;a href=&#34;https://fluxcd.io/&#34;&gt;Flux&lt;/a&gt; is one of them. In this post I will give you a glance on how I manage my Kubernetes manifests using Flux.&lt;/p&gt;</description>
     </item>
     
   </channel>

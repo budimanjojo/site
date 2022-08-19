@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Desktop Stuffs on Budiman JOJO</title>
+    <title>Desktop Stuffs on Budiman JoJo</title>
     <link>https://budimanjojo.com/categories/desktop-stuffs/</link>
-    <description>Recent content in Desktop Stuffs on Budiman JOJO</description>
+    <description>Recent content in Desktop Stuffs on Budiman JoJo</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 13 Dec 2021 23:54:07 +0000</lastBuildDate><atom:link href="https://budimanjojo.com/categories/desktop-stuffs/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,8 +12,8 @@
       <pubDate>Mon, 13 Dec 2021 23:54:07 +0000</pubDate>
       
       <guid>https://budimanjojo.com/2021/12/13/managing-dotfiles-with-chezmoi/</guid>
-      <description>Introduction The biggest difference between my setup and your setup might be our configuration files. In Unix world we call them dotfiles. Dotfiles are just files whose filename starts with a dot and will be hidden by default in our file managers.
-Usually we have several machines that we use consequently, and we want all those machines to share the same environment. And that’s why most most people will have have own collection of dotfiles stored somewhere so they can easily migrate them over to their new machine.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://budimanjojo.com/wp-content/uploads/2021/12/chezmoi-e1639414532178.png&#34; alt=&#34;managing-dotfiles-with-chezmoi&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The biggest difference between my setup and your setup might be our configuration files. In Unix world we call them dotfiles. Dotfiles are just files whose filename starts with a dot and will be hidden by default in our file managers.&lt;/p&gt;</description>
     </item>
     
   </channel>

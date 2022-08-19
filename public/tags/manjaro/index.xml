@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>manjaro on Budiman JOJO</title>
+    <title>manjaro on Budiman JoJo</title>
     <link>https://budimanjojo.com/tags/manjaro/</link>
-    <description>Recent content in manjaro on Budiman JOJO</description>
+    <description>Recent content in manjaro on Budiman JoJo</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 25 Nov 2019 00:04:50 +0000</lastBuildDate><atom:link href="https://budimanjojo.com/tags/manjaro/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Raspberry Pi Media Server Series #1 &amp;#8211; Installing Manjaro</title>
+      <title>Raspberry Pi Media Server Series #1 - Installing Manjaro</title>
       <link>https://budimanjojo.com/2019/11/25/raspberry-pi-media-server-series-1-installing-manjaro/</link>
       <pubDate>Mon, 25 Nov 2019 00:04:50 +0000</pubDate>
       
       <guid>https://budimanjojo.com/2019/11/25/raspberry-pi-media-server-series-1-installing-manjaro/</guid>
-      <description>Introduction So you bought a Raspberry Pi and you don’t know what should you do with it. Well, in this series I want to share my way of using my Raspberry Pi. I bet you already guessed it right by reading the title. Yes, this is the first part of my Raspberry Pi Media Server series. Before I continue, here’s what I have for this project:
-A full set of 2GB Raspberry Pi 4 Model B ORICO 3.</description>
+      <description>&lt;p&gt;So you bought a Raspberry Pi and you don’t know what should you do with it. Well, in this series I want to share my way of using my Raspberry Pi. I bet you already guessed it right by reading the title. Yes, this is the first part of my Raspberry Pi Media Server series. Before I continue, here’s what I have for this project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A full set of &lt;a href=&#34;https://www.raspberrypi.org/products/raspberry-pi-4-model-b/&#34;&gt;2GB Raspberry Pi 4 Model B&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://my.orico.cc/goods.php?id=4817&#34;&gt;ORICO 3.5 inch Dual Bay Aluminum Alloy USB3.0 Hard Drive Enclosure (9528U3)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Two 1TB Hard Disk Drive&lt;/li&gt;
+&lt;li&gt;A memory card reader&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://budimanjojo.com/author/</loc>
-    <lastmod>2021-12-13T23:54:07+00:00</lastmod>
+    <loc>https://budimanjojo.com/page/github/</loc>
+    <lastmod>2022-08-18T00:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://budimanjojo.com/page/archive/</loc>
+    <lastmod>2022-08-19T00:00:00+07:00</lastmod>
   </url><url>
     <loc>https://budimanjojo.com/</loc>
+    <lastmod>2022-08-19T00:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://budimanjojo.com/page/</loc>
+    <lastmod>2022-08-19T00:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://budimanjojo.com/page/about-budimanjojo/</loc>
+    <lastmod>2022-08-18T00:00:00+07:00</lastmod>
+  </url><url>
+    <loc>https://budimanjojo.com/author/</loc>
     <lastmod>2021-12-13T23:54:07+00:00</lastmod>
   </url><url>
     <loc>https://budimanjojo.com/author/budimanjojo/</loc>
@@ -130,6 +142,8 @@
   </url><url>
     <loc>https://budimanjojo.com/2019/11/25/raspberry-pi-media-server-series-1-installing-manjaro/</loc>
     <lastmod>2019-11-25T00:04:50+00:00</lastmod>
+  </url><url>
+    <loc>https://budimanjojo.com/archive/</loc>
   </url><url>
     <loc>https://budimanjojo.com/series/</loc>
   </url>
