@@ -3,7 +3,7 @@ title: "About Me"
 date: 2022-08-18T00:00:00+07:00
 excludeFromTopNav: false
 showDate: false
-showComment: false
+showComments: false
 ---
 Welcome to my personal site! I'm a technology enthusiast that love Linux and opensource.
 My name is Budiman and I live in Indonesia.
