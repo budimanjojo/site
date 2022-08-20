@@ -3,7 +3,7 @@ baseURL: https://budimanjojo.com
 theme: bilberry-hugo-theme
 enableRobotsTXT: true
 permalinks:
-  article: /:year/:month/:day/:title/
+  article: /:year/:month/:day/:slug/
 
 # Language
 defaultContentLanguage: en
