@@ -16,7 +16,7 @@ slug: moved-wordpress-to-hugo
 ---
 ![moved-wordpress-to-hugo](/images/moved-wordpress-to-hugo_1.png)
 
-I have finally managed to get everything in this site from [Wordpress](https://wordpress.com/) to [Hugo](https://gohugo.io/) (at least locally).
+I have finally managed to get everything in this site from [Wordpress](https://wordpress.com/) to [Hugo](https://gohugo.io/).
 Everything is looking great, especially for the speed that I will never get from any CMS out there.
 I hesitated the move a little when people are recommending me static site generator like [jekyll](https://jekyllrb.com/) and Hugo.
 I always thought that it will be hard, manually writing the entire website using `html` and `css` codes.
