@@ -1,22 +1,24 @@
 ---
-author: budimanjojo
+title: "Raspberry Pi Media Server Series 4 - Setting Up Docker"
+date: 2019-12-18T01:24:55Z
+
 categories:
-- Linux
-- Raspberry Pi
-- Self Hosted
-date: "2019-12-18T01:24:55Z"
-guid: https://budimanjojo.com/?p=203
-id: 203
+  - Linux
+  - Raspberry Pi
+  - Self Hosted
 tags:
-- arm
-- docker
-- linux
-- raspberry pi
-title: 'Raspberry Pi Media Server Series #4 - Setting Up Docker'
-url: /2019/12/18/raspberry-pi-media-server-series-4-setting-up-docker/
+  - arm
+  - docker
+  - linux
+  - raspberry pi
+toc: false
+author: budimanjojo
 slug: raspberry-pi-media-server-series-4-setting-up-docker
 ---
-This is the forth part of my Raspberry Pi Media Server series. If you haven’t read our previous part, [here’s](https://budimanjojo.com/raspberry-pi-media-server-series-3-external-drives/) where we discussed setting up external drives on Raspberry Pi. In this part, we are going to setting up [Docker](https://www.docker.com/) on Raspberry Pi. Here’s what you will get if you follow through the end of the tutorial:
+This is the forth part of my Raspberry Pi Media Server series.
+If you haven’t read our previous part, [here’s](https://budimanjojo.com/2019/12/09/raspberry-pi-media-server-series-3-external-drives/) where we discussed setting up external drives on Raspberry Pi.
+In this part, we are going to setting up [Docker](https://www.docker.com/) on Raspberry Pi.
+Here’s what you will get if you follow through the end of the tutorial:
 
 - Docker and Docker Compose installed
 - Docker data will be in the external drives
@@ -24,7 +26,8 @@ This is the forth part of my Raspberry Pi Media Server series. If you haven’t 
 
 ## Getting Started
 
-Before we get our hands on setting up docker on our Raspberry Pi, let’s first do a system update. If you are on Manjaro, the command will be:
+Before we get our hands on setting up docker on our Raspberry Pi, let’s first do a system update.
+If you are on Manjaro, the command will be:
 
 ```
 sudo pacman -Syu
@@ -40,7 +43,8 @@ You may need to reboot your Raspberry Pi if there’s a kernel or firmware upgra
 
 ## Installing Required Programs
 
-The packages we need are `docker` and `docker-compose`. To do this on Manjaro ARM, it’s really simple. Just do:
+The packages we need are `docker` and `docker-compose`.
+To do this on Manjaro ARM, it’s really simple. Just do:
 
 ```
 sudo pacman -S docker-compose
@@ -75,7 +79,8 @@ sudo apt install -y --no-install-recommends \
     cgroupfs-mount
 ```
 
-You might want to add your user to the docker group, so you don’t need to use root privileges to run docker commands. Here’s the one liner, replace &lt;username&gt; with the user you are using on your Pi:
+You might want to add your user to the docker group, so you don’t need to use root privileges to run docker commands.
+Here’s the one liner, replace &lt;username&gt; with the user you are using on your Pi:
 
 ```
 sudo usermod -aG docker <username>
@@ -83,15 +88,21 @@ sudo usermod -aG docker <username>
 
 ## Using External Drives for Data
 
-Your docker data might be getting bigger and bigger as time goes by. That is not really a good idea to use the small and slow SD card to store them. That is why I prefer storing them in my RAID1 BTRFS external drives which I mentioned in the [previous part](https://budimanjojo.com/raspberry-pi-media-server-series-3-external-drives/). To do this, we will use mount binding using fstab.
+Your docker data might be getting bigger and bigger as time goes by.
+That is not really a good idea to use the small and slow SD card to store them.
+That is why I prefer storing them in my RAID1 BTRFS external drives which I mentioned in the [previous part](https://budimanjojo.com/raspberry-pi-media-server-series-3-external-drives/).
+To do this, we will use mount binding using fstab.
 
-Let’s create a folder you want to bind our Docker data to. I have my external drives mounted on `/mnt`, so in my example I will create a folder `/mnt/docker-root`:
+Let’s create a folder you want to bind our Docker data to.
+I have my external drives mounted on `/mnt`, so in my example I will create a folder `/mnt/docker-root`:
 
 ```
 sudo mkdir /mnt/docker-root
 ```
 
-Also, make sure `/var/lib/docker` exists in your system. It should be there if you have started docker service (which should be automatic in Raspbian but not in Manjaro). If the folder doesn’t exist, let’s create it and give it a right permission:
+Also, make sure `/var/lib/docker` exists in your system.
+It should be there if you have started docker service (which should be automatic in Raspbian but not in Manjaro).
+If the folder doesn’t exist, let’s create it and give it a right permission:
 
 ```
 sudo mkdir -p /var/lib/docker && sudo chmod -R 711 /var/lib/docker
@@ -123,7 +134,9 @@ After=var-lib-docker.mount
 Requires=var-lib-docker.mount
 ```
 
-Save and exit. That’s it. Systemd will not start docker service if your docker data is not mounted in your external drives.
+Save and exit.
+That’s it.
+Systemd will not start docker service if your docker data is not mounted in your external drives.
 
 ## Enable Docker
 
@@ -135,4 +148,6 @@ sudo systemctl enable docker.service
 
 ## Ending
 
-We have just finished setting up Docker in our Raspberry Pi. In the next part, we will proceed on getting our hands on setting up DNS and port forwarding our Raspberry Pi so we can access it from the outside world. Stay tuned! 🙂
+We have just finished setting up Docker in our Raspberry Pi.
+In the next part, we will proceed on getting our hands on setting up DNS and port forwarding our Raspberry Pi so we can access it from the outside world.
+Stay tuned! 🙂
