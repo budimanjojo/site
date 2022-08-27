@@ -78,7 +78,7 @@ data:
 Great, but how do I achieve this?
 Actually it’s really simple in [Flux](https://fluxcd.io/).
 All you need to do is to tell Flux about where to substitute from using the [Kustomization](https://fluxcd.io/docs/components/kustomize/kustomization/) CRD.
-If you followed my previous post about [**how I deployed Flux into my Kubernetes cluster**](https://budimanjojo.com/2021/10/20/how-i-manage-my-kubernetes-manifests-using-flux/), you should know how to create a kustomization file using Flux CLI already.
+If you followed my previous post about [**how I deployed Flux into my Kubernetes cluster**](https://budimanjojo.com/2021/10/20/manage-kubernetes-manifests-using-flux/), you should know how to create a kustomization file using Flux CLI already.
 Inside that file, you can add a `postBuild` section under `spec` and give it a ConfigMap or Secret that you want to substitute from:
 
 ```
