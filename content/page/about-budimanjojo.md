@@ -22,7 +22,7 @@ You can find more about my Kubernetes cluster in my [Github repository](https://
 Here are the list of my personal highlight that I want you to know:
 
 - I use [neovim](https://neovim.io/) as my main text editor and I use vim keybindings as much as I can in other apps.
-- [I use Arch BTW](https://knowyourmeme.com/memes/btw-i-use-arch) 😃.
+- ~~[I use Arch BTW](https://knowyourmeme.com/memes/btw-i-use-arch)~~ I switched to NixOS in 2022 😃.
 - My current Kubernetes cluster runs on [Talos Linux](https://www.talos.dev/)
 - My first program is [talhelper](https://github.com/budimanjojo/talhelper) which is a tool to GitOps Talos Linux written in Go.
 - I live in CLI most of the time, you can visit my [dotfiles repo](https://github.com/budimanjojo/dotfiles) for my config files.
