@@ -21,7 +21,7 @@ slug: my-journey-dye-sublimating-pbt-keycap-legends
 Have you ever looked at your keyboard and felt like something was missing?
 That was the case for me after I built my [Sofle](https://josefadamcik.github.io/SofleKeyboard/) split keyboard.
 While the sleek and minimalist design appealed to me, the blank keycaps felt bland and uninspiring.
-Tha's when I decided to take matters into my own hands and dye-sublimate custom legends onto my PBT keycaps.
+That's when I decided to take matters into my own hands and dye-sublimate custom legends onto my PBT keycaps.
 <!--more-->
 
 Not only did it add a pop of personality to my keyboard, but it also gave me a fun experience.
@@ -54,7 +54,7 @@ Here's a screenshot of my design:
 ![design](/images/my-journey-dye-sublimating-pbt-keycap-legends_3.png)
 
 Once I was happy with my design, I sent the file to a local printing service, where they printed it onto heat transfer paper.
-This cost me me only 6.000 IDR (less than 0.5 USD)!
+This cost me only 6.000 IDR (less than 0.5 USD)!
 
 Here are a few tips I learned from my experience:
 
@@ -102,13 +102,13 @@ Once you've taped all of your keycaps, you're ready to move on to the next steps
 ## Heat pressing the keycaps
 
 With your heat transfer paper taped onto your keycaps, it's time to press the dye ink into the PBT material using heat.
-This step is crucial to ensuring that your legends are durable and long-lasting.
+This step is crucial to ensure that your legends are durable and long-lasting.
 
 To get started, place a small silicone rubber on top of each keycaps.
 The size of the silicone may vary depending on the keycap  surface - in my case, I found that using just a small silicone worked best.
 
 Next, set your clothes iron to the maximum temperature (around 200°C) and let it heat up.
-Then, line up several keycaps on your heat-resistance mat, making sure that they are spaced apart evenly.
+Then, line up several keycaps on your heat-resistance mat, make sure that they are spaced apart evenly.
 I was able to press up to three keycaps at once, but you may be able to do more depending on the size of your iron and the layout of your workspace.
 
 Once your keycaps are in place, start your timer for 90 seconds and begin pressing the clothes iron onto them.
