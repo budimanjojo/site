@@ -79,6 +79,7 @@ In my Home Assistant, I create an automation like this:
   trigger:
   - platform: webhook
     webhook_id: update_config
+    local_only: false
 
   action:
   - service: shell_command.update_config
@@ -130,3 +131,7 @@ There are still a lot of caveats, like I can’t make sure whether the container
 But at least I managed to get what I wanted, which is having GitOps like experience in my Home Assistant configuration.
 Please leave any idea or feedback in the comment section if you have anything to share with me.
 Thank you 🙂
+
+Updates:
+
+- 9th May 2023: Added the required `local_only: false` for webhook automation trigger in the upcoming HAss update.
