@@ -1,0 +1,12 @@
+<a class="bubble" href="{{ .ctx.Permalink }}">
+    <i class="fas fa-fw {{ or .ctx.Params.icon "fa-pencil-alt" }}"></i>
+</a>
+
+<article class="default article">
+    {{ partial "featured-image.html" .ctx }}
+    {{ partial "default-content.html" (dict "ctx" .ctx "template_type" .template_type) }}
+    {{ if eq .template_type "single" }}
+    <center><p style="margin-bottom: 5px;">If you want to buy me a coffee: </p><iframe src="https://github.com/sponsors/budimanjojo/button" title="Sponsor budimanjojo" height="32" width="114" style="margin-bottom: 1em; border: 0; border-radius: 6px;"></iframe></center>
+    {{ end }}
+    {{ partial "article-footer.html" .ctx }}
+</article>
