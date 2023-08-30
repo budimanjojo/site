@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 date: 2022-08-18T00:00:00+07:00
-excludeFromTopNav: false
+menu: topnav
 showDate: false
 showComments: false
 readingTime: 0

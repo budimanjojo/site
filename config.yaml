@@ -1,6 +1,6 @@
 title: Budiman JoJo
 baseURL: https://budimanjojo.com
-theme: bilberry-hugo-theme
+theme: bilberry-hugo-theme/v4
 enableRobotsTXT: true
 permalinks:
   article: /:year/:month/:day/:slug/
