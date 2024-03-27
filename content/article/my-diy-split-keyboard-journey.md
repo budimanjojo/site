@@ -89,7 +89,7 @@ It was a delightful experience that further fueled my passion for DIY  split key
 
 Serving as the powerhouse for my keyboards, I utilized Micro USB ProMicro controllers.
 Flashing them with the versatile and customizable [qmk](https://qmk.fm/), I gained full control over the functionality and behavior of my keyboards.
-For those interested, you can explore my keymaps [on my GitHub fork](https://github.com/budimanjojo/qmk_firmware/tree/master/keyboards/sofle/keymaps/budimanjojo), where I plan to delve into the firmware aspect in more detail in my future article.
+For those interested, you can explore my keymaps [on my GitHub fork](https://github.com/budimanjojo/qmk-keebs/tree/main/keyboards/sofle/rev1/keymaps/budimanjojo), where I plan to delve into the firmware aspect in more detail in my future article.
 There's a lot to uncover and share about this fascinating process.
 
 As a little teaser, let me give you a glimpse of the OLED display on my Sofle keyboard.
