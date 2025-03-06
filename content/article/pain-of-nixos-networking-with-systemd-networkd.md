@@ -148,14 +148,4 @@ The logic feels contradictory.
 
 That said, despite all these quirks, I still like `systemd-networkd` and NixOS.
 At the end of the day, I have a fully functional open-source router running exactly the way I want.
-And really, what more
-
-These are all the things that I can think of right now that I consider quirks.
-There are more trivial issues that I ran into that I don't include here, like the complexity of `systemd-networkd`.
-It's trying to do a lot of things, but very inconsistent in doing it.
-
-For example, I believe the reason of it not deleting interfaces that it doesn't manage anymore is to not break things in case you are still using the interface.
-This is a fair enough reason, but why does it deletes nexthops, routes, routing policies it doesn't by default?
-
-After all this, I still like `systemd-networkd` and NixOS.
-I have a working router that is using opensource tools thanks to them, what more can I ask for?
+And really, what more can I ask for?
